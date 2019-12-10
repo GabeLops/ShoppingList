@@ -10,14 +10,20 @@ import UIKit
 
 class ViewController: UITableViewController {
     var wishList = [String]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Christmas Wishlist!"
         
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let sc = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareScreen))
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetScreen))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptforAnswer))
+        
+        toolbarItems = [spacer, sc]
+        navigationController?.isToolbarHidden = false
         
     }
     
@@ -57,7 +63,18 @@ class ViewController: UITableViewController {
             Error.addAction(UIAlertAction(title: "Okay", style: .default))
             present(Error, animated: true)
             
+            
         }
+        
+        
+    }
+    
+    @objc func shareScreen() {
+        let list = wishList.joined(separator: "\n")
+        let avc = UIActivityViewController(activityItems: [list], applicationActivities: nil)
+        avc.popoverPresentationController?.barButtonItem =
+        navigationItem.backBarButtonItem
+        present(avc, animated: true)
         
     }
     
@@ -76,11 +93,13 @@ class ViewController: UITableViewController {
         }))
         present (ac, animated: true)
 
+        }
+    
+    
         
-        
-        
+
     }
 
 
-}
+
 

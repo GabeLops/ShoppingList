@@ -33,12 +33,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UxG-5y-JYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884.057971014493" y="32.8125"/>
+            <point key="canvasLocation" x="2794.202898550725" y="32.8125"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="EyT-eM-RoL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2St-ZZ-Vev" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="csg-r7-WPy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ygm-oN-CAc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -51,7 +52,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7s-7s-6nh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.91304347826099" y="32.8125"/>
+            <point key="canvasLocation" x="1884.057971014493" y="32.8125"/>
         </scene>
     </scenes>
 </document>
